@@ -10,7 +10,7 @@ createRoot(document.getElementById("root")).render(
 );
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register(`http://localhost:5173/firebase-messaging-sw.js`)
+    .register(`http://localhost:3007/firebase-messaging-sw.js`)
     .then((registration) => {
       console.log(
         "Service Worker registration successful with scope: ",

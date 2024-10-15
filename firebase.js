@@ -23,14 +23,17 @@ async function requestForToken() {
     });
     if (res) {
       console.log("current token for client: ", res);
+      return res;
       //   ارسال توکن به سرور یا ذخیره‌سازی آن
     } else {
       console.log(
         "No registration token available. Request permission to generate one."
       );
+      return ""
     }
   } catch (err) {
     console.log("An error occurred while retrieving token. ", err);
+    return ""
   }
 }
 

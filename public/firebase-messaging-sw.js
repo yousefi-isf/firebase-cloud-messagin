@@ -18,9 +18,10 @@ firebase.initializeApp({
 
 // Initialize Firebase Messaging
 const messaging = firebase.messaging();
-
+console.log("test")
 // Handle background message
 messaging.onBackgroundMessage((payload) => {
+  
   console.log("[Service Worker] Background message received:", payload);
 
   const notificationTitle = payload.notification.title;
